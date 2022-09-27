@@ -1,0 +1,130 @@
+.scroll-prompt-right {
+  display: inline-block;
+  position: absolute;
+  right: 10px;
+  bottom: 0;
+  z-index: 2;
+  padding: 10px 10px 110px;
+  color: antiquewhite;
+  font-size: 14px;
+  font-family: "Josefin Sans", sans-serif;
+  line-height: 2;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  -ms-writing-mode: tb-lr;
+      writing-mode: vertical-lr;
+  transition: 0.2s;
+  overflow: hidden;
+}
+.scroll-prompt-right::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  height: 100px;
+  background: antiquewhite;
+  -webkit-animation: sdl01 1.5s cubic-bezier(1, 0, 0, 1) infinite;
+          animation: sdl01 1.5s cubic-bezier(1, 0, 0, 1) infinite;
+}
+
+@-webkit-keyframes sdl01 {
+  0% {
+    transform: scale(1, 0);
+    transform-origin: 0 0;
+  }
+  50% {
+    transform: scale(1, 1);
+    transform-origin: 0 0;
+  }
+  50.1% {
+    transform: scale(1, 1);
+    transform-origin: 0 100%;
+  }
+  100% {
+    transform: scale(1, 0);
+    transform-origin: 0 100%;
+  }
+}
+
+@keyframes sdl01 {
+  0% {
+    transform: scale(1, 0);
+    transform-origin: 0 0;
+  }
+  50% {
+    transform: scale(1, 1);
+    transform-origin: 0 0;
+  }
+  50.1% {
+    transform: scale(1, 1);
+    transform-origin: 0 100%;
+  }
+  100% {
+    transform: scale(1, 0);
+    transform-origin: 0 100%;
+  }
+}
+.scroll-prompt-top {
+  position: absolute;
+  padding-top: 80px;
+  bottom: 10vh;
+  width: 100vw;
+  text-align: center;
+  color: antiquewhite;
+  font-family: "Josefin Sans", sans-serif;
+  transform: scale3d(1.5, 1, 1);
+}
+.scroll-prompt-top span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  border-left: 2px solid antiquewhite;
+  border-bottom: 2px solid antiquewhite;
+  transform: rotate(-45deg);
+  -webkit-animation: sdb 2s infinite;
+  animation: sdb 2s infinite;
+  opacity: 0;
+  box-sizing: border-box;
+}
+.scroll-prompt-top span:nth-of-type(1) {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+.scroll-prompt-top span:nth-of-type(2) {
+  top: 16px;
+  -webkit-animation-delay: 0.15s;
+  animation-delay: 0.15s;
+}
+.scroll-prompt-top span:nth-of-type(3) {
+  top: 32px;
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+}
+
+@-webkit-keyframes sdb {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes sdb {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}/*# sourceMappingURL=animation.css.map */

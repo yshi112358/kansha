@@ -1,0 +1,446 @@
+html {
+    overflow: auto;
+}
+
+body {
+    font-family: "Times New Roman", "YuMincho", "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif;
+    overflow-x: hidden;
+}
+
+.container {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 100vh;
+    width: 100vw;
+}
+
+.bg-niji {
+    background-image: url(../gif/niji.gif);
+    background-repeat: repeat;
+    width: 1000vw;
+    height: 1000vh;
+    position: fixed;
+    top: 0;
+    left: -250vw;
+    top: -250vh;
+    z-index: -20;
+}
+
+#top {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    scroll-snap-align: start;
+    overflow: hidden;
+
+    .bg-kansha {
+        background-image: url(../gif/四方八方感謝太郎.gif);
+        background-repeat: repeat;
+        background-size: 200px;
+        width: 500vw;
+        height: 500vh;
+        position: absolute;
+        top: -250vh;
+        left: -250vw;
+    }
+
+    .kansha-birth {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .bg-niji {
+        z-index: 0;
+        position: absolute;
+    }
+
+    .bg-curtain {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        background-color: rgba(255, 255, 255, 0.381);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+#message {
+    .message-ct {
+        width: 100vw;
+        height: 200vh;
+
+        .message-box {
+            position: sticky;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            justify-content: center;
+            top: 0;
+
+            .message-bg {
+                background-color: antiquewhite;
+                width: 80vw;
+                height: 30vh;
+                display: flex;
+                flex-flow: column;
+                align-items: center;
+                justify-content: center;
+
+                .message {
+                    color: rgb(139, 145, 145);
+                    font-size: 4vw;
+                }
+            }
+        }
+    }
+}
+
+#message-tele {
+    .message-tele-ct {
+        width: 100vw;
+        height: 500vh;
+        background-color: rgba(250, 235, 215, 0.946);
+        position: absolute;
+        top: 0;
+        color: rgb(139, 145, 145);
+
+        .message-tele-title {
+            position: sticky;
+            top: 10vh;
+            width: 100vw;
+            text-align: center;
+            font-size: 30px;
+            pointer-events: none;
+        }
+
+        .message-tele-box {
+            width: 100vw;
+            height: 100vh;
+            position: sticky;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-flow: column;
+
+            .message-tele-content {
+                width: 500px;
+                max-width: 90vw;
+            }
+
+            .message-tele-name {
+                width: 500px;
+                max-width: 90vw;
+                text-align: right;
+            }
+        }
+    }
+}
+
+.bg-gallery {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    z-index: -10;
+
+    .kansha-loop {
+        display: flex;
+        width: 4000px;
+
+        .kansha-gallery {
+            top: -50px;
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            width: 2000px;
+
+            img {
+                flex-grow: 1;
+                object-fit: cover;
+                height: 200px;
+                max-width: 400px;
+                margin: 2px;
+                border-radius: 4px;
+            }
+        }
+    }
+
+
+    .comment-flow {
+        color: antiquewhite;
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-flow: column;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        top: 0;
+
+        .comment-move {
+            position: relative;
+            display: inline-block;
+            flex-grow: 1;
+            object-fit: contain;
+            font-size: 20px;
+            left: 100vw;
+        }
+    }
+
+    .comment-yours {
+        color: antiquewhite;
+        position: absolute;
+        display: inline-block;
+        flex-grow: 1;
+        object-fit: contain;
+        font-size: 20px;
+        left: 100vw;
+        border: solid 3px #98ba03;
+        top: 50vh;
+    }
+}
+
+#comment {
+    .comment-ct {
+        position: absolute;
+        top: 0;
+        height: 500vh;
+
+        .comment-box {
+            z-index: 10;
+            position: sticky;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            justify-content: center;
+            top: 0;
+
+            .comment-bg {
+                position: absolute;
+                background-color: antiquewhite;
+                width: 80vw;
+                height: 50px;
+                bottom: 100px;
+                border-radius: 25px;
+
+                form {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    border-radius: 25px;
+                    position: relative;
+
+                    .comment-input {
+                        margin-left: 20px;
+                        width: 70vw;
+                        height: 50px;
+                    }
+
+                    .comment-submit {
+                        margin-right: 10px;
+                        width: 50px;
+                        height: 50px;
+                        padding: 10px 10px 10px 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// .bg-kansha-kawaii {
+//     width: 100vw;
+//     height: 100vh;
+//     background-color: aqua;
+// }
+
+// .bg-history-transparent-100vh {
+//     width: 100vw;
+//     height: 100vh;
+//     position: relative;
+//     scroll-snap-align: start;
+//     background-color: aqua;
+// }
+
+.bg-history-transparent {
+    width: 100vw;
+    height: 500vh;
+    position: relative;
+    scroll-snap-align: start;
+}
+
+.bg-history {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: antiquewhite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    z-index: -5;
+
+    .player-frame {
+        position: absolute;
+        width: 500px;
+        height: 400px;
+        background-color: black;
+        overflow: hidden;
+
+        .player-scroll {
+            width: 1000vw;
+            height: 100%;
+            background-image: url('/assets/img/kansha/359E2023-3BE5-405A-BC2F-91EC38A9DBA4.JPG');
+        }
+
+        .sequence-bar {
+            position: absolute;
+            bottom: 30px;
+            width: 0px;
+            height: 5px;
+            background-color: red;
+        }
+    }
+}
+
+.ct-tp {
+    width: 100vw;
+    height: 100vh;
+    scroll-snap-align: start;
+    position: relative;
+}
+
+.bg-gallery-transparent {
+    width: 100vw;
+    height: 1000vh;
+    position: relative;
+    scroll-snap-align: start;
+
+    .comment-box {
+        position: sticky;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        top: 0;
+
+        .comment-bg {
+            position: absolute;
+            background-color: antiquewhite;
+            width: 80vw;
+            height: 50px;
+            bottom: 100px;
+            border-radius: 25px;
+
+            form {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                border-radius: 25px;
+                position: relative;
+
+                .comment-input {
+                    margin-left: 20px;
+                    width: 70vw;
+                    height: 50px;
+                }
+
+                .comment-submit {
+                    margin-right: 10px;
+                    width: 50px;
+                    height: 50px;
+                    padding: 10px 10px 10px 10px;
+                }
+            }
+        }
+    }
+
+}
+
+// .bg-kansha-kawaii {
+//     width: 100vw;
+//     height: 100vh;
+//     background-color: aqua;
+// }
+
+// .bg-history-transparent-100vh {
+//     width: 100vw;
+//     height: 100vh;
+//     position: relative;
+//     scroll-snap-align: start;
+//     background-color: aqua;
+// }
+
+.bg-history-transparent {
+    width: 100vw;
+    height: 500vh;
+    position: relative;
+    scroll-snap-align: start;
+}
+
+.bg-history {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: antiquewhite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    z-index: -5;
+
+    .player-frame {
+        position: absolute;
+        width: 500px;
+        height: 400px;
+        background-color: black;
+        overflow: hidden;
+
+        .player-scroll {
+            width: 1000vw;
+            height: 100%;
+            background-image: url('/assets/img/kansha/359E2023-3BE5-405A-BC2F-91EC38A9DBA4.JPG');
+        }
+
+        .sequence-bar {
+            position: absolute;
+            bottom: 30px;
+            width: 0px;
+            height: 5px;
+            background-color: red;
+        }
+    }
+}
+
+.bg-black {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    scroll-snap-align: start;
+
+    .slogan {
+        font-size: 10vw;
+    }
+
+    .chuokeion {
+        font-size: 4vw;
+    }
+}
