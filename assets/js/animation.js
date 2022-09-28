@@ -151,6 +151,54 @@ tlComment.to(".comment-box", {
     duration: 20,
     ease: "power4.easeOut"
 });
+
+gsap.set(
+    ['.history-first', '.history-first .history-video-title', '.history-first .video-player'],
+    {
+        x: 300,
+        opacity: 0
+    }
+);
+
+gsap.set(
+    ['.history-latest', '.history-latest .history-video-title', '.history-latest .video-player'],
+    {
+        x: -300,
+        opacity: 0
+    }
+);
+
+const tlHistory = gsap.timeline({
+    scrollTrigger: {
+        trigger: '#history',
+        start: 'top center'
+    }
+});
+tlHistory.to('.history-first', {
+    x: 0,
+    opacity: 1,
+    duration: 1,
+}, "history-first").to('.history-first .history-video-title', {
+    x: 0,
+    opacity: 1,
+    duration: 0.5,
+}, "history-first").to('.history-first .video-player', {
+    x: 0,
+    opacity: 1,
+    duration: 0.5,
+}, "history-first").to('.history-latest', {
+    x: 0,
+    opacity: 1,
+    duration: 1,
+}, "history-latest").to('.history-latest .history-video-title', {
+    x: 0,
+    opacity: 1,
+    duration: 0.5,
+}, "history-latest").to('.history-latest .video-player', {
+    x: 0,
+    opacity: 1,
+    duration: 0.5,
+}, "history-latest");
 // }).to(".bg-history", {
 //     y: 0,
 //     duration: 1,

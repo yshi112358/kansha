@@ -133,6 +133,53 @@ body {
   text-align: right;
 }
 
+#history {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-flow: column;
+  background-color: antiquewhite;
+}
+#history .video-player {
+  width: 500px;
+  height: 300px;
+  max-width: 80vw;
+  max-height: 30vh;
+}
+#history .history-title {
+  color: rgb(139, 145, 145);
+  font-size: 30px;
+}
+#history .history-video-title {
+  color: antiquewhite;
+  font-size: 20px;
+  height: 40px;
+}
+#history .history-first {
+  width: 80vw;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  position: relative;
+  background-color: hotpink;
+  margin-left: 20vw;
+  padding-right: 20vw;
+}
+#history .history-latest {
+  width: 80vw;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  position: relative;
+  background-color: hotpink;
+  margin-right: 20vw;
+  padding-left: 20vw;
+}
+
 .bg-gallery {
   width: 100vw;
   height: 100vh;
