@@ -1,3 +1,5 @@
+var windowHeight = $('#top').height();
+
 gsap.to('.bg-kansha', { x: -200, y: -200, duration: 3, repeat: -1, ease: 'none' });
 gsap.to('.kansha-gallery', { x: -2000, duration: 20, repeat: -1, ease: 'none' });
 
@@ -54,7 +56,7 @@ const tlMessage = gsap.timeline({
     scrollTrigger: {
         trigger: "#message",
         start: "top top",
-        end: '+=' + window.innerHeight * 2,
+        end: '+=' + windowHeight * 2,
         scrub: 1,
         markers: true,
     },
@@ -63,7 +65,7 @@ const tlMessageTeleIn = gsap.timeline({
     scrollTrigger: {
         trigger: "#message-tele",
         start: "top top",
-        end: '+=' + window.innerHeight * 4,
+        end: '+=' + windowHeight * 4,
         scrub: 1,
         markers: true,
     },
@@ -72,7 +74,7 @@ const tlMessageTeleOut = gsap.timeline({
     scrollTrigger: {
         trigger: "#message-tele",
         start: "top top",
-        end: '+=' + window.innerHeight * 5,
+        end: '+=' + windowHeight * 5,
         scrub: 1,
         markers: true,
     },
@@ -81,7 +83,7 @@ const tlComment = gsap.timeline({
     scrollTrigger: {
         trigger: "#comment",
         start: "top top",
-        end: '+=' + window.innerHeight * 1,
+        end: '+=' + windowHeight * 1,
         scrub: 1,
         markers: true,
     },
@@ -90,7 +92,7 @@ const tlCommentScroll = gsap.timeline({
     scrollTrigger: {
         trigger: "#comment",
         start: "top top",
-        end: '+=' + window.innerHeight * 4,
+        end: '+=' + windowHeight * 4,
         scrub: 1,
         markers: true,
     },
@@ -166,7 +168,7 @@ tlComment.to(".comment-box", {
 //     scrollTrigger: {
 //         trigger: ".bg-history-transparent-100vh",
 //         start: "top top",
-//         end: '+=' + window.innerHeight,
+//         end: '+=' + windowHeight,
 //         scrub: 1,
 //         markers: true,
 //     },
@@ -182,7 +184,7 @@ tlComment.to(".comment-box", {
 //     scrollTrigger: {
 //         trigger: ".bg-history-transparent",
 //         start: "top top",
-//         end: '+=' + window.innerHeight * 5,
+//         end: '+=' + windowHeight * 5,
 //         scrub: 1,
 //         markers: true,
 //     },
