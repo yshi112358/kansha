@@ -30,7 +30,7 @@ form_recipe.addEventListener("submit", function () {
         ease: "sine",
         onComplete: () => {
             form_recipe.reset();
-            tlGallery.to(".comment-yours", {
+            tlCommentScroll.to(".comment-yours", {
                 x: '-200vw',
                 duration: "random(10, 50)",
                 ease: "power0.inOut"
