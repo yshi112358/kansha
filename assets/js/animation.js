@@ -64,7 +64,7 @@ const tlMessageTeleIn = gsap.timeline({
         start: "top top",
         end: '+=' + windowHeight * 13,
         scrub: 1,
-        markers: true,
+        //markers: true,
     },
 });
 const tlMessageTeleOut = gsap.timeline({
@@ -73,7 +73,7 @@ const tlMessageTeleOut = gsap.timeline({
         start: "top top",
         end: '+=' + windowHeight * 14,
         scrub: 1,
-        markers: true,
+        //markers: true,
     },
 });
 const tlComment = gsap.timeline({
@@ -82,7 +82,7 @@ const tlComment = gsap.timeline({
         start: "top top",
         end: '+=' + windowHeight * 1,
         scrub: 1,
-        markers: true,
+        //markers: true,
     },
 });
 const tlCommentScroll = gsap.timeline({
@@ -91,7 +91,7 @@ const tlCommentScroll = gsap.timeline({
         start: "top top",
         end: '+=' + windowHeight * 4,
         scrub: 1,
-        markers: true,
+        //markers: true,
     },
 });
 const tlHistory = gsap.timeline({
