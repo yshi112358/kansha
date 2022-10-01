@@ -55,17 +55,14 @@ tlTop.to(".bg-curtain img", {
 const tlMessage = gsap.timeline({
     scrollTrigger: {
         trigger: "#message",
-        start: "top top",
-        end: '+=' + windowHeight * 2,
-        scrub: 1,
-        markers: true,
+        start: "top center",
     },
 });
 const tlMessageTeleIn = gsap.timeline({
     scrollTrigger: {
         trigger: "#message-tele",
         start: "top top",
-        end: '+=' + windowHeight * 4,
+        end: '+=' + windowHeight * 13,
         scrub: 1,
         markers: true,
     },
@@ -74,7 +71,7 @@ const tlMessageTeleOut = gsap.timeline({
     scrollTrigger: {
         trigger: "#message-tele",
         start: "top top",
-        end: '+=' + windowHeight * 5,
+        end: '+=' + windowHeight * 14,
         scrub: 1,
         markers: true,
     },
@@ -97,6 +94,12 @@ const tlCommentScroll = gsap.timeline({
         markers: true,
     },
 });
+const tlHistory = gsap.timeline({
+    scrollTrigger: {
+        trigger: '#history',
+        start: 'top center'
+    }
+});
 
 gsap.set(
     ['.message-box', '.message-tele-box', '.comment-box'],
@@ -107,12 +110,8 @@ gsap.set(
 
 tlMessage.to(".message-box", {
     opacity: 1,
-    duration: 20,
+    duration: 1,
     ease: "power4.easeOut",
-}).to(".message-box", {
-    opacity: 0,
-    duration: 20,
-    ease: "power4.inOut",
     onComplete: () => {
         tlCommentScroll.to(".comment-move", {
             x: '-300vw',
@@ -124,6 +123,7 @@ tlMessage.to(".message-box", {
             },
         });
     }
+
 });
 
 tlMessageTeleIn.to(".message-tele-box", {
@@ -168,12 +168,7 @@ gsap.set(
     }
 );
 
-const tlHistory = gsap.timeline({
-    scrollTrigger: {
-        trigger: '#history',
-        start: 'top center'
-    }
-});
+
 tlHistory.to('.history-first', {
     x: 0,
     opacity: 1,

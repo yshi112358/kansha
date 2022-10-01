@@ -68,7 +68,7 @@ body {
 
 #message .message-ct {
   width: 100vw;
-  height: 200vh;
+  height: 100vh;
 }
 #message .message-ct .message-box {
   position: -webkit-sticky;
@@ -97,7 +97,7 @@ body {
 
 #message-tele .message-tele-ct {
   width: 100vw;
-  height: 500vh;
+  height: 1400vh;
   background-color: rgba(250, 235, 215, 0.946);
   position: absolute;
   top: 0;
@@ -193,7 +193,7 @@ body {
   width: 4000px;
 }
 .bg-gallery .kansha-loop .kansha-gallery {
-  top: -50px;
+  top: -20px;
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -203,7 +203,7 @@ body {
   flex-grow: 1;
   -o-object-fit: cover;
      object-fit: cover;
-  height: 200px;
+  height: 26vh;
   max-width: 400px;
   margin: 2px;
   border-radius: 4px;
