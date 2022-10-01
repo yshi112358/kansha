@@ -116,7 +116,7 @@ tlMessage.to(".message-box", {
         tlCommentScroll.to(".comment-move", {
             x: '-300vw',
             duration: "random(10, 50)",
-            ease: "power0.inOut",
+            ease: "power4.inOut",
             stagger: {
                 each: 0.01, // ばらす間隔（秒）
                 from: "random" // ランダムに開始
