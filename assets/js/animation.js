@@ -88,7 +88,7 @@ const tlComment = gsap.timeline({
 const tlCommentScroll = gsap.timeline({
     scrollTrigger: {
         trigger: "#comment",
-        start: "center top",
+        start: "end top",
         end: '+=' + windowHeight * 4,
         scrub: 1,
         //markers: true,
