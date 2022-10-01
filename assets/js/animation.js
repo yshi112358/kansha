@@ -62,7 +62,7 @@ const tlMessageTeleIn = gsap.timeline({
     scrollTrigger: {
         trigger: "#message-tele",
         start: "top top",
-        end: '+=' + windowHeight * 13,
+        end: '+=' + windowHeight * 15,
         scrub: 1,
         //markers: true,
     },
@@ -71,7 +71,7 @@ const tlMessageTeleOut = gsap.timeline({
     scrollTrigger: {
         trigger: "#message-tele",
         start: "top top",
-        end: '+=' + windowHeight * 14,
+        end: '+=' + windowHeight * 16,
         scrub: 1,
         //markers: true,
     },
